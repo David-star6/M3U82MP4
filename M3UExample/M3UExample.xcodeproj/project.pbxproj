@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,10 @@
 		458FB218259584EA0014114B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458FB216259584EA0014114B /* Main.storyboard */; };
 		458FB21A259584ED0014114B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458FB219259584ED0014114B /* Assets.xcassets */; };
 		458FB21D259584ED0014114B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458FB21B259584ED0014114B /* LaunchScreen.storyboard */; };
+		92F5B2A32595C8E7002C8D6E /* Transcoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F5B2A22595C8E7002C8D6E /* Transcoder.swift */; };
+		92F5B2A72595C926002C8D6E /* CommandPacker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F5B2A62595C926002C8D6E /* CommandPacker.swift */; };
+		92F5B2AB2595C9F3002C8D6E /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F5B2AA2595C9F3002C8D6E /* Localization.swift */; };
+		92F5B2B32595CD7D002C8D6E /* VideoList in Resources */ = {isa = PBXBuildFile; fileRef = 92F5B2B22595CD7D002C8D6E /* VideoList */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,11 @@
 		458FB219259584ED0014114B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		458FB21C259584ED0014114B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		458FB21E259584ED0014114B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92F5B29D2595C8AF002C8D6E /* M3UExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "M3UExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		92F5B2A22595C8E7002C8D6E /* Transcoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transcoder.swift; sourceTree = "<group>"; };
+		92F5B2A62595C926002C8D6E /* CommandPacker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPacker.swift; sourceTree = "<group>"; };
+		92F5B2AA2595C9F3002C8D6E /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		92F5B2B22595CD7D002C8D6E /* VideoList */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoList; sourceTree = SOURCE_ROOT; };
 		ADD4081C2E8942D6DDF01D37 /* Pods-M3UExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M3UExample.debug.xcconfig"; path = "Target Support Files/Pods-M3UExample/Pods-M3UExample.debug.xcconfig"; sourceTree = "<group>"; };
 		BE7A4427F992BCCCC016FECA /* Pods-M3UExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M3UExample.release.xcconfig"; path = "Target Support Files/Pods-M3UExample/Pods-M3UExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,7 +57,6 @@
 				ADD4081C2E8942D6DDF01D37 /* Pods-M3UExample.debug.xcconfig */,
 				BE7A4427F992BCCCC016FECA /* Pods-M3UExample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,6 +81,9 @@
 		458FB20F259584EA0014114B /* M3UExample */ = {
 			isa = PBXGroup;
 			children = (
+				92F5B2B22595CD7D002C8D6E /* VideoList */,
+				92F5B2A52595C8F7002C8D6E /* Transcoder */,
+				92F5B29D2595C8AF002C8D6E /* M3UExample-Bridging-Header.h */,
 				458FB210259584EA0014114B /* AppDelegate.swift */,
 				458FB212259584EA0014114B /* SceneDelegate.swift */,
 				458FB214259584EA0014114B /* ViewController.swift */,
@@ -90,6 +101,16 @@
 				418F7A593959126463F05E41 /* Pods_M3UExample.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92F5B2A52595C8F7002C8D6E /* Transcoder */ = {
+			isa = PBXGroup;
+			children = (
+				92F5B2A22595C8E7002C8D6E /* Transcoder.swift */,
+				92F5B2A62595C926002C8D6E /* CommandPacker.swift */,
+				92F5B2AA2595C9F3002C8D6E /* Localization.swift */,
+			);
+			path = Transcoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +147,7 @@
 				TargetAttributes = {
 					458FB20C259584EA0014114B = {
 						CreatedOnToolsVersion = 11.2;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -152,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F5B2B32595CD7D002C8D6E /* VideoList in Resources */,
 				458FB21D259584ED0014114B /* LaunchScreen.storyboard in Resources */,
 				458FB21A259584ED0014114B /* Assets.xcassets in Resources */,
 				458FB218259584EA0014114B /* Main.storyboard in Resources */,
@@ -207,6 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F5B2A32595C8E7002C8D6E /* Transcoder.swift in Sources */,
+				92F5B2A72595C926002C8D6E /* CommandPacker.swift in Sources */,
+				92F5B2AB2595C9F3002C8D6E /* Localization.swift in Sources */,
 				458FB215259584EA0014114B /* ViewController.swift in Sources */,
 				458FB211259584EA0014114B /* AppDelegate.swift in Sources */,
 				458FB213259584EA0014114B /* SceneDelegate.swift in Sources */,
@@ -354,8 +380,9 @@
 			baseConfigurationReference = ADD4081C2E8942D6DDF01D37 /* Pods-M3UExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZP2U5TZHDY;
+				DEVELOPMENT_TEAM = 7VCJ87V42T;
 				INFOPLIST_FILE = M3UExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -363,6 +390,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.david.M3UExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "M3UExample/M3UExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,8 +402,9 @@
 			baseConfigurationReference = BE7A4427F992BCCCC016FECA /* Pods-M3UExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZP2U5TZHDY;
+				DEVELOPMENT_TEAM = 7VCJ87V42T;
 				INFOPLIST_FILE = M3UExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -382,6 +412,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.david.M3UExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "M3UExample/M3UExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

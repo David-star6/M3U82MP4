@@ -1,0 +1,6 @@
+framework module Pods_M3UExample {
+  umbrella header "Pods-M3UExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

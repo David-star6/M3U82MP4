@@ -9,12 +9,30 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, TranscoderHandleDelegate {
+    
+    func didFinish(_ result: Result) {
+        switch result {
+        case .failure(.parametersInvalid):
+            print("失败")
+        case .success:
+            print("成功")
+        case .cancel:
+            print("取消")
+        }
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Transcoder.shared.delegate = self
+        
+        let tsPath = Bundle.main.url(forResource: "VideoList", withExtension: nil)!.appendingPathComponent("video.m3u8").path
+
+        let mp4Path = NSHomeDirectory().appending("/Documents/\(UUID().uuidString).mp4")
+
+        Transcoder.shared.execute(m3u8Path: tsPath, mp4Path: mp4Path)
+        
         return true
     }
 
