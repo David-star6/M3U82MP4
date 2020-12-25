@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.4.1)
+  - mobile-ffmpeg-full (3.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - mobile-ffmpeg-full (= 3.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - mobile-ffmpeg-full
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  mobile-ffmpeg-full: ab9728f93c506e99cec20e8051140a67e35f99f9
+
+PODFILE CHECKSUM: 7f9fc5c94d2d03fcd8e4f0e335f55481e7fa1a13
+
+COCOAPODS: 1.9.3

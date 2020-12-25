@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C31C266AEC3DA01966F316E /* Pods_M3UExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F7A593959126463F05E41 /* Pods_M3UExample.framework */; };
 		458FB211259584EA0014114B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458FB210259584EA0014114B /* AppDelegate.swift */; };
 		458FB213259584EA0014114B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458FB212259584EA0014114B /* SceneDelegate.swift */; };
 		458FB215259584EA0014114B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458FB214259584EA0014114B /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		418F7A593959126463F05E41 /* Pods_M3UExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_M3UExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		458FB20D259584EA0014114B /* M3UExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M3UExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458FB210259584EA0014114B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		458FB212259584EA0014114B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		458FB219259584ED0014114B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		458FB21C259584ED0014114B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		458FB21E259584ED0014114B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADD4081C2E8942D6DDF01D37 /* Pods-M3UExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M3UExample.debug.xcconfig"; path = "Target Support Files/Pods-M3UExample/Pods-M3UExample.debug.xcconfig"; sourceTree = "<group>"; };
+		BE7A4427F992BCCCC016FECA /* Pods-M3UExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M3UExample.release.xcconfig"; path = "Target Support Files/Pods-M3UExample/Pods-M3UExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C31C266AEC3DA01966F316E /* Pods_M3UExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		057C87DED338FF6F7EE5029B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADD4081C2E8942D6DDF01D37 /* Pods-M3UExample.debug.xcconfig */,
+				BE7A4427F992BCCCC016FECA /* Pods-M3UExample.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		458FB204259584EA0014114B = {
 			isa = PBXGroup;
 			children = (
 				458FB20F259584EA0014114B /* M3UExample */,
 				458FB20E259584EA0014114B /* Products */,
+				057C87DED338FF6F7EE5029B /* Pods */,
+				4E3C893F7C546C7CE79054DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = M3UExample;
 			sourceTree = "<group>";
 		};
+		4E3C893F7C546C7CE79054DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				418F7A593959126463F05E41 /* Pods_M3UExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 458FB221259584ED0014114B /* Build configuration list for PBXNativeTarget "M3UExample" */;
 			buildPhases = (
+				B89B5B37E6A24C1E856A5C53 /* [CP] Check Pods Manifest.lock */,
 				458FB209259584EA0014114B /* Sources */,
 				458FB20A259584EA0014114B /* Frameworks */,
 				458FB20B259584EA0014114B /* Resources */,
+				351EEAE7CAB7AADDFD4A2D4B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		351EEAE7CAB7AADDFD4A2D4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-M3UExample/Pods-M3UExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-M3UExample/Pods-M3UExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-M3UExample/Pods-M3UExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B89B5B37E6A24C1E856A5C53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-M3UExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		458FB209259584EA0014114B /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		458FB222259584ED0014114B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADD4081C2E8942D6DDF01D37 /* Pods-M3UExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		458FB223259584ED0014114B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE7A4427F992BCCCC016FECA /* Pods-M3UExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
